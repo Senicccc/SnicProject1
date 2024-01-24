@@ -177,22 +177,24 @@ nav ul.slide {
     animation : fadein ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    animation: glowing 1300ms infinite;
     position: absolute;
     text-align: center;
     font-size: 20px;
     text-decoration: none;
     background-color: rgb(237, 157, 157);
+    box-shadow: 0 0px 15px rgb(247, 70, 70);
     color: rgb(162, 23, 23);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
     padding: 20px;  
-    top: 65%;  
+    top: 60%;  
     left: 50%;  
     transform: translate(-50%, -50%); 
     width: 30%;
-    box-shadow: 0 0px 15px rgb(247, 70, 70);
+    
 }
 
 .button:hover {
@@ -287,11 +289,32 @@ nav ul.slide {
     }
 
     .button {
-        top: 60%;
-        width: 2000%;
+        top: 50%;
+        width: 80%;
     }
 }
 
+.button {
+    animation: fadein ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: rgb(240, 187, 187);
+    color: rgb(162, 23, 23);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    box-shadow: 0 0px 15px rgb(241, 96, 96);
+}
 
 .button:hover {
     background-color: rgb(240, 189, 189);
@@ -309,3 +332,18 @@ nav ul.slide {
         opacity: 1;
     }
 }
+
+@keyframes glowing {
+    0% {
+        background-color: rgb(237, 157, 157);
+        box-shadow: 0 0px 15px rgb(247, 70, 70);
+    }
+    50% {
+        background-color: rgb(240, 189, 189);
+        box-shadow: 0 0px 15px rgb(229, 123, 123);
+    }
+    100% {
+        background-color: rgb(237, 157, 157);
+        box-shadow: 0 0px 15px rgb(247, 70, 70);
+    }
+  }
